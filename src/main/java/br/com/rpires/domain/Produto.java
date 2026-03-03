@@ -29,8 +29,8 @@ public class Produto implements Persistente {
 	@ColunaTabela(dbName = "valor", setJavaName = "setValor")
 	private BigDecimal valor;
 
-	@ColunaTabela(dbName = "data_nascimento", setJavaName = "setDataNascimento")
-	private java.time.Instant dataNascimento;
+	@ColunaTabela(dbName = "data_validade", setJavaName = "setDataValidade")
+	private java.time.Instant dataValidade;
 
 	public String getCodigo() {
 		return codigo;
@@ -72,11 +72,11 @@ public class Produto implements Persistente {
 		this.id = id;
 	}
 
-	public java.time.Instant getDataNascimento() {
-		return dataNascimento;
+	public java.time.Instant getDataValidade() {
+		return dataValidade;
 	}
 
-	public void setDataNascimento(java.time.Instant dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setDataValidade(java.time.Instant dataValidade) {
+		this.dataValidade = dataValidade;
 	}
 }

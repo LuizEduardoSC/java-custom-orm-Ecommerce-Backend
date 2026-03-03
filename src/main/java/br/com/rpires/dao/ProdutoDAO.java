@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import br.com.rpires.dao.generic.GenericDAO;
 import br.com.rpires.domain.Produto;
 
-
 public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoDAO {
 
 	public ProdutoDAO() {
@@ -27,14 +26,14 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 		entityCadastrado.setDescricao(entity.getDescricao());
 		entityCadastrado.setNome(entity.getNome());
 		entityCadastrado.setValor(entity.getValor());
-		entityCadastrado.setDataNascimento(entity.getDataNascimento());
+		entityCadastrado.setDataValidade(entity.getDataValidade());
 	}
 
 	@Override
 	protected String getQueryInsercao() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("INSERT INTO TB_PRODUTO ");
-		sb.append("(ID, CODIGO, NOME, DESCRICAO, VALOR, DATA_NASCIMENTO)");
+		sb.append("(ID, CODIGO, NOME, DESCRICAO, VALOR, DATA_VALIDADE)");
 		sb.append("VALUES (nextval('sq_produto'),?,?,?,?,?)");
 		return sb.toString();
 	}
@@ -46,7 +45,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 		stmInsert.setString(3, entity.getDescricao());
 		stmInsert.setBigDecimal(4, entity.getValor());
 		stmInsert.setTimestamp(5,
-				entity.getDataNascimento() != null ? java.sql.Timestamp.from(entity.getDataNascimento()) : null);
+				entity.getDataValidade() != null ? java.sql.Timestamp.from(entity.getDataValidade()) : null);
 	}
 
 	@Override
@@ -67,7 +66,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 		sb.append("NOME = ?,");
 		sb.append("DESCRICAO = ?,");
 		sb.append("VALOR = ?,");
-		sb.append("DATA_NASCIMENTO = ?");
+		sb.append("DATA_VALIDADE = ?");
 		sb.append(" WHERE CODIGO = ?");
 		return sb.toString();
 	}
@@ -79,7 +78,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 		stmUpdate.setString(3, entity.getDescricao());
 		stmUpdate.setBigDecimal(4, entity.getValor());
 		stmUpdate.setTimestamp(5,
-				entity.getDataNascimento() != null ? java.sql.Timestamp.from(entity.getDataNascimento()) : null);
+				entity.getDataValidade() != null ? java.sql.Timestamp.from(entity.getDataValidade()) : null);
 		stmUpdate.setString(6, entity.getCodigo());
 	}
 

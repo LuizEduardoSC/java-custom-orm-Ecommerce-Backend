@@ -29,7 +29,7 @@ public class ProdutoDaoMock implements IProdutoDAO {
 	public Produto consultar(String valor) {
 		Produto produto = new Produto();
 		produto.setCodigo(valor);
-		produto.setDataNascimento(java.time.Instant.now());
+		produto.setDataValidade(java.time.Instant.now());
 		return produto;
 	}
 

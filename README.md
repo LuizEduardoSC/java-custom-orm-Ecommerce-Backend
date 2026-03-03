@@ -54,7 +54,7 @@ CREATE TABLE tb_produto (
     nome VARCHAR(100) NOT NULL,
     descricao VARCHAR(150) NOT NULL,
     valor NUMERIC(10,2) NOT NULL,
-    data_nascimento TIMESTAMP
+    data_validade TIMESTAMP
 );
 ```
 
