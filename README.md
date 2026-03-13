@@ -1,6 +1,6 @@
 # java-custom-orm (Ecommerce Backend) 🚀
 
-Este é o projeto desenvolvido durante o Módulo 30 do curso Backend (Ebac), com o objetivo de criar uma infraestrutura de **Persistência de Dados** utilizando **JDBC** puro e um padrão **Generic DAO** baseado em **Reflection** e **Anotações customizadas** em Java.
+Este é um projeto focado no desenvolvimento de uma infraestrutura robusta de **Persistência de Dados** utilizando **JDBC** puro e um padrão **Generic DAO** baseado em **Reflection** e **Anotações customizadas** em Java.
 
 ## 🎯 Objetivo do Projeto
 Demonstrar a construção de um mini "ORM" (Object-Relational Mapping) do zero em Java. O projeto utiliza anotações customizadas para mapear entidades diretamente para tabelas do banco de dados relacional (PostgreSQL), executando operações de **CRUD** (Create, Read, Update, Delete) de forma genérica sem precisar rescrever SQL repetidamente para novas entidades.
@@ -70,4 +70,4 @@ CREATE TABLE tb_produto (
 
 ---
 
-*Projeto construído abordando conceitos profundos do Java e fortalecendo as bases de frameworks complexos do mercado como Hibernate/JPA.*
+*Projeto desenvolvido para aprimoramento de habilidades avançadas em Java, arquitetura de software e padrões de persistência.*
