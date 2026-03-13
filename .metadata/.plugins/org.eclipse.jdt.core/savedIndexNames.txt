@@ -1,2 +1,0 @@
-INDEX VERSION 1.134+C:\DEV\BACKEND\Módulo 30 - Mãos na massa PROJETO 3 - Parte 2\ExemploVendasMod30\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
